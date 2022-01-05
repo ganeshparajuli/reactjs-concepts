@@ -41,10 +41,11 @@ const ToDo = () => {
         ...prevItems,
         { id: Math.random(), item, isDone: false }
       ]);
+
       setItem('');
     }
   };
-
+console.log("itemList",itemList);
   const handleItemClass = index => {
     setItemList(
       itemList.map(el => {
