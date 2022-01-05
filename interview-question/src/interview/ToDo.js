@@ -34,7 +34,7 @@ const ToDo = () => {
   const onChange = e => {
     setItem(e.target.value);
   };
-
+//what the  use of math.random here!!!
   const handleClick = () => {
     if (item.length > 0) {
       setItemList(prevItems => [
