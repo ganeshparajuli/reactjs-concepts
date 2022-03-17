@@ -13,7 +13,7 @@ mongoose
 // mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/mychoice');
 
 //routes
-app.use(userRoutes)
+app.use("/api",userRoutes)
 
 // app.get("/", (req, res) => {
 //     res.send("hello from node js");
