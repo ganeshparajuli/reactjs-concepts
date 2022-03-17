@@ -1,6 +1,16 @@
 const express = require("express");
-const app = express();
+const mongoose =require('mongoose');
 require("dotenv").config();
+//app
+const app = express();
+//db 
+mongoose
+    .connect(process.env.MONGODB_URL  || 'mongodb://localhost/mychoice')
+    .then (() =>console. log("DB Connected")); 
+//*recommended alternate way mention below.    
+// mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/mychoice');
+
+//routes
 app.get("/", (req, res) => {
     res.send("hello from node js");
 });
